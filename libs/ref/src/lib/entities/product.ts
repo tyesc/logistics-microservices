@@ -12,10 +12,13 @@ export class Product {
   name: string;
 
   @Prop([String])
-  categories: string[]
+  categories: string[];
 
   @Prop()
   description: string;
+
+  @Prop()
+  price: number;
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);

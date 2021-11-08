@@ -5,14 +5,10 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { PingController } from './ping/ping.controller';
 import { RefModule } from '@log/ref';
+import { environment } from '../environments/environment';
 
 @Module({
-  imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://ynov:ynov2021@fhemery.7sqpm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-    ),
-    RefModule
-  ],
+  imports: [MongooseModule.forRoot(environment.mongoUrl), RefModule],
   controllers: [AppController, PingController],
   providers: [AppService],
 })
