@@ -1,8 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "clients": "libs/clients",
     "contracts": "libs/contracts",
     "ref": "libs/ref",
-    "referential": "apps/referential"
+    "referential": "apps/referential",
+    "supply": "libs/supply"
   }
 }
