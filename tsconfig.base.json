@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@log/contracts": ["libs/contracts/src/index.ts"],
       "@log/ref": ["libs/ref/src/index.ts"]
     }
   },
