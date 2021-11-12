@@ -1,0 +1,45 @@
+
+<div class='shopping-catalog'>
+  <div>
+  <h1>In catalog</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>EAN</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let product of (products | async)'>
+        <td>{{product._id}}</td>
+        <td>{{product.ean}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td><span class='action' (click)='addToCart(product._id)'>+1</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div *ngIf='shoppingCart | async as cart'>
+    <h1>In shopping cart</h1>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor='let product of cart.products'>
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+</div>

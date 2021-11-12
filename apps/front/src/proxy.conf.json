@@ -1,0 +1,44 @@
+{
+  "/api/referential/*": {
+    "target": "https://fhemery-logistics.herokuapp.com/api/",
+    "secure": true,
+    "logLevel" : "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/api/referential/" : ""}
+  },
+  "/api/shopping": {
+    "target": "https://whispering-hollows-91070.herokuapp.com/api/",
+    "secure": true,
+    "logLevel" : "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/api/shopping/" : ""}
+  },
+  "/api/supply": {
+    "target": "https://appro1.herokuapp.com/",
+    "secure": true,
+    "logLevel" : "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/api/supply/" : ""}
+  },
+  "/api/order": {
+    "target": "https://blobfish-tech.herokuapp.com/api/",
+    "secure": true,
+    "logLevel" : "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/api/order/" : ""}
+  },
+  "/api/stock": {
+    "target": "https://logistics-microservices-stock.herokuapp.com/api/",
+    "secure": true,
+    "logLevel" : "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/api/stock/" : ""}
+  },
+  "/api/delivery": {
+    "target": "https://ynov-archlo-delivery.herokuapp.com/api/",
+    "secure": true,
+    "logLevel" : "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/api/delivery/" : ""}
+  }
+}
