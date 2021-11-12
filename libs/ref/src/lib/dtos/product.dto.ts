@@ -19,8 +19,6 @@ export class ProductDto {
   description: string;
 
   @ApiProperty()
-  @IsString()
-  @IsNotEmpty()
   categories: string[];
 
   @ApiProperty()
