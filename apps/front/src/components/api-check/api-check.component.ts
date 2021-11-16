@@ -17,7 +17,6 @@ export class ApiCheckComponent implements OnInit {
   }
 
   private checkStatus() {
-    console.log('Checking status');
     this.apiCheckService.getApiStatuses().subscribe((res) => {
       this.statuses = res;
     });
