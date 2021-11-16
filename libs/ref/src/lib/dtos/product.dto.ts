@@ -25,4 +25,9 @@ export class ProductDto {
   @IsNumber()
   @IsNotEmpty()
   price: number;
+
+  @ApiProperty()
+  @IsString()
+  @IsNotEmpty()
+  condition?: string;
 }
