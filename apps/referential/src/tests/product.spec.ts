@@ -6,7 +6,7 @@ import { Model } from 'mongoose';
 import { Product, ProductDocument } from '@log/ref';
 import { getModelToken } from '@nestjs/mongoose';
 
-async function createProduct(app: INestApplication) {
+export async function createProduct(app: INestApplication) {
   const { body } = await request(app.getHttpServer())
     .post('/api/products')
     .send({
