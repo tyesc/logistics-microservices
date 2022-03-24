@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { PingController } from './ping/ping.controller';
 import { BasketController } from './basket/basket.controller';
+import { ProductController } from './product/product.controller';
 import { RefModule } from '@log/ref';
 import { environment } from '../environments/environment';
 import { ClientsModule } from '@log/clients';
@@ -23,7 +24,7 @@ import { GraphQLModule } from '@nestjs/graphql';
       autoSchemaFile: true,
     }),
   ],
-  controllers: [AppController, PingController, BasketController],
+  controllers: [AppController, PingController, BasketController, ProductController],
   providers: [AppService],
 })
 export class AppModule {}
