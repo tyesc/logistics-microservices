@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Put, HttpCode, NotFoundException } from '@nestjs/common';
+import {Body, Controller, Get, Put, HttpCode, NotFoundException, HttpException, HttpStatus, Post} from '@nestjs/common';
 import axios from 'axios';
 import * as contracts from '@log/contracts';
 import BasketRepository from '../repository/basket-repository';
@@ -27,5 +27,27 @@ export class BasketController {
     const basket = basketRepository.addProduct(product.data);
 
     return basket
+  }
+
+  @Post("/checkout")
+  @HttpCode(200)
+  async checkoutBasket(): Promise<any> {
+    const basket = await basketRepository.getBasket();
+    if (!basket.products.length) {
+      throw new HttpException({
+        status: HttpStatus.FORBIDDEN,
+        error: 'Basket is already empty',
+      }, HttpStatus.FORBIDDEN);
+    }
+    // const response = await.post('url/api/order',{contrat: })
+    const order = 1;
+    if(!order) {
+      throw new HttpException({
+        status: HttpStatus.INTERNAL_SERVER_ERROR,
+        error: 'Error creating order',
+      }, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    return basketRepository.emptyBasket();
   }
 }

@@ -20,4 +20,11 @@ export default class BasketRepository {
     return basket;
   }
 
+  public emptyBasket(): string {
+    this.basket.set(this.key, { totalPrice: 0, products: [] });
+    return 'basket emptied';
+  }
+
+
+
 }
