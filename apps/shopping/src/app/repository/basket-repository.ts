@@ -12,10 +12,19 @@ export default class BasketRepository {
     return this.basket.get(this.key);
   }
 
-  public addProduct(productDTO: contracts.ProductsAddedToBasketDto): contracts.BasketDto {
+  public addProduct(basketDto: any, productDTO: any): contracts.BasketDto {
 
     const basket = this.basket.get(this.key);
-    basket.products.push(productDTO);
+
+    let price = basket.totalPrice;
+
+    for (let i = 0 ; basketDto.quantity > i; i++) {
+      basket.products.push(productDTO);
+
+      price += productDTO.price;
+    }
+
+    basket.totalPrice = price;
 
     return basket;
   }

@@ -24,7 +24,7 @@ export class BasketController {
       throw new NotFoundException();
     }
 
-    const basket = basketRepository.addProduct(product.data);
+    const basket = basketRepository.addProduct(basketDto, product.data);
 
     return basket
   }
