@@ -5,6 +5,7 @@
     "contracts": "libs/contracts",
     "ref": "libs/ref",
     "referential": "apps/referential",
+    "shopping": "apps/shopping",
     "supply": "libs/supply"
   }
 }

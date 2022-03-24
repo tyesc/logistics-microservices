@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
+    "start-shopping": "nx run shopping:serve",
     "build": "nx build",
     "test": "nx test",
     "affected:lint": "nx affected:lint",
