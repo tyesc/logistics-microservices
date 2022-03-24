@@ -1,1 +1,1 @@
-web: node dist/apps/referential/main.js
+web: node dist/apps/shopping/main.js
