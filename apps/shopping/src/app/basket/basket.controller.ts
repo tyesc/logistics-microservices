@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Put, HttpCode, NotFoundException } from '@nestjs/common';
 import axios from 'axios';
-import * as contracts from '@log/contracts';*
+import * as contracts from '@log/contracts';
 import BasketRepository from '../repository/basket-repository';
 
 const basketRepository = new BasketRepository();
